@@ -155,7 +155,7 @@
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:background="@drawable/btn_background"
+        android:background="@drawable/button_design"
         android:id="@+id/RelativeLayout_Done"
         >
 
