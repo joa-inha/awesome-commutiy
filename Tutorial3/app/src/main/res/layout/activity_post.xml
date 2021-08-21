@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="12dp"
+    android:paddingTop="26dp"
+    android:paddingRight="12dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="26dp"
+        android:gravity="center"
+        android:text="@string/writing"
+        android:fontFamily="@font/eland_choice_bold"
+        android:textColor="@color/living_coral"
+        android:textSize="24dp" />
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:hint="제목"
+            android:paddingLeft="10dp"
+            android:id="@+id/EditText_title"
+            android:background="@color/transparent_gray"
+            >
+
+        </EditText>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:hint="내용을 입력하세요."
+            android:id="@+id/EditText_context"
+            android:layout_marginBottom="16dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="13dp"
+            android:gravity="top"
+            android:background="@color/transparent_gray"
+            >
+
+        </EditText>
+
+    <android.widget.Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_design_coral"
+        android:text="완료"
+        android:textColor="@color/white"
+        android:id="@+id/Button_post"/>
+
+
+</LinearLayout>

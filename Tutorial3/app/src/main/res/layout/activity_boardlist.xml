@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text=""
+        android:background="@color/living_coral" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginHorizontal="10dp"
+        android:text=""
+        android:background="@drawable/board_title"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="20dp">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/board_list"
+    android:textColor="@color/white"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:textSize="25sp"
+    android:fontFamily="@font/eland_choice_bold"
+    />
+
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_free_board"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:id="@+id/TextView_free_board"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="@string/free_board"
+            android:fontFamily="@font/eland_choice_bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:text="@string/context1"
+            android:fontFamily="@font/nanumgothic"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_private_board"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="@string/private_board"
+            android:fontFamily="@font/eland_choice_bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:text="@string/context2"
+            android:fontFamily="@font/nanumgothic"/>
+    </LinearLayout>
+
+</LinearLayout>
+</FrameLayout>
