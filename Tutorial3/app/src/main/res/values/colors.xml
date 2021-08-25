@@ -18,5 +18,6 @@
     <color name="colorBlue">#00b2ed</color>
     <color name="colorDarkBlue">#3a5994</color>
     <color name="lightgray">#DCDCDC</color>
+    <color name="morelightgray">#FAFAFA</color>
 
 </resources>

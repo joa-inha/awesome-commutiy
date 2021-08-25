@@ -28,6 +28,7 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:hint="search"
+            android:textSize="16dp"
             />
 
         <RelativeLayout
@@ -127,6 +128,63 @@
         android:textSize="20dp"
         android:textColor="@color/black"
         />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_reply"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:weightSum="11"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Recycler_view_reply"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:layout_weight="10"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/replyboard_background"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/replyboard_background"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TextInputEditText_reply"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                />
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout_reply"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/search_btn_background">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="reply"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
 
 
 </LinearLayout>

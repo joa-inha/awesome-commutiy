@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/ImageView_writer_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@null"
+            android:src="@mipmap/cactus_logo" />
+
+        <TextView
+            android:id="@+id/TextView_writer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hhcc05"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:layout_marginRight="10dp"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/TextView_reply"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:text="text"
+        android:textSize="16dp"
+        android:gravity="left|center"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/TextView_reply_time"
+        android:layout_width="77dp"
+        android:layout_height="match_parent"
+        android:text="date+time"
+        android:gravity="right|center"
+        android:textSize="12dp"
+        />
+
+
+</LinearLayout>
