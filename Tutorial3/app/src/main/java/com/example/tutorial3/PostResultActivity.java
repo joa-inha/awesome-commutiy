@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputEditText;
 
-public class LoginResultActivity extends AppCompatActivity {
+public class PostResultActivity extends AppCompatActivity {
 
 TextView TextView_get;
 
@@ -23,8 +23,8 @@ TextView TextView_get;
         //값을 받을 intent 만들기
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();  // 일단 extra들을 bundle에 갖고옴
-        String email = bundle.getString("email");
-        String password = bundle.getString("password");
-        TextView_get.setText(email+" / "+password);
+        String title = bundle.getString("title");
+        String context = bundle.getString("context");
+        TextView_get.setText(title+" / "+context);
     }
 }
