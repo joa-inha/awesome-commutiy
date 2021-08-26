@@ -3,19 +3,18 @@ package info.hitech.model;
 import java.sql.Date;
 
 public class FreeBoardVO {
-    private String boardId;
+    private int boardId;
     private String userName;
     private String title;
     private String category;
     private String content;
-    private int viewCount;
     private Date wdate;
 
-    public String getBoardId() {
+    public int getBoardId() {
         return boardId;
     }
 
-    public void setBoardId(String boardId) {
+    public void setBoardId(int boardId) {
         this.boardId = boardId;
     }
 
@@ -49,14 +48,6 @@ public class FreeBoardVO {
 
     public void setContent(String content) {
         this.content = content;
-    }
-
-    public int getViewCount() {
-        return viewCount;
-    }
-
-    public void setViewCount(int viewCount) {
-        this.viewCount = viewCount;
     }
 
     public Date getWdate() {

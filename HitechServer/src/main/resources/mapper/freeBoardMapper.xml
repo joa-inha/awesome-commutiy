@@ -5,6 +5,19 @@
 
 <mapper namespace="mapper.freeBoard">
 
+    <resultMap id="boardResultMap" type="info.hitech.model.UserVO">
+        <result property="id" column="id"/>
+        <result property="userName" column="username"/>
+        <result property="passWord" column="password"/>
+    </resultMap>
+
+    <select id="selectUserInfoAll" resultType="hashMap">
+    <![CDATA[
+        SELECT id, username, password
+        FROM TBL_USER
+        ]]>
+    </select>
+
 <insert id="insertBoard" parameterType="info.hitech.model.FreeBoardVO">
     <selectKey resultType="String" order="BEFORE" keyProperty="boardId">
         SELECT
@@ -15,6 +28,8 @@
     values(#{boardId},#{userName}, #{title}, #{category}, #{content}, now())
 
 </insert>
+    SELECT idx, username, title, content, type, date from TBL_BOARD natural join(TBL_USER);
 
+    SELECT idx, username, title, content, type, date from TBL_BOARD natural join(TBL_USER) WHERE idx = 1;
 
 </mapper>

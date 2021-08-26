@@ -4,6 +4,7 @@ import info.hitech.model.FreeBoardVO;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import java.util.List;
 
 @Repository
 public class FreeBoardRepository {
@@ -12,7 +13,15 @@ public class FreeBoardRepository {
     @Autowired
     private SqlSessionTemplate sqlSessionTemplate;
 
+    public List getBoardAll(){
+        return sqlSessionTemplate.selectList(MAPPER_NAME_SPACE+ "selectBoardAll");
+    }
+
     public void registBoard(FreeBoardVO freeBoardVO){
         sqlSessionTemplate.insert(MAPPER_NAME_SPACE+ "insertBoard", freeBoardVO);
+    }
+
+    public FreeBoardVO getBoardByIdx(int idx){
+        return sqlSessionTemplate.selectOne(MAPPER_NAME_SPACE+ "getBoard", idx);
     }
 }
