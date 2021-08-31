@@ -1,6 +1,7 @@
 package info.hitech.repository;
 
-import info.hitech.model.FreeBoardVO;
+import info.hitech.model.boardVO.FreeBoardVO;
+import info.hitech.model.boardVO.InsertBoardVO;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -20,8 +21,8 @@ public class FreeBoardRepository {
         return sqlSessionTemplate.selectList(MAPPER_NAME_SPACE+ "selectBoardAll");
     }
 
-    public void registBoard(FreeBoardVO freeBoardVO){
-        sqlSessionTemplate.insert(MAPPER_NAME_SPACE+ "insertBoard", freeBoardVO);
+    public void registBoard(InsertBoardVO insertBoardVO){
+        sqlSessionTemplate.insert(MAPPER_NAME_SPACE+ "insertBoard", insertBoardVO);
     }
 
     public FreeBoardVO getBoardByIdx(int idx){

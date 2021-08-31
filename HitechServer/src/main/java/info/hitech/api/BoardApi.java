@@ -1,10 +1,8 @@
 package info.hitech.api;
 
-import info.hitech.model.FreeBoardVO;
-import info.hitech.model.UserVO;
+import info.hitech.model.boardVO.FreeBoardVO;
+import info.hitech.model.boardVO.InsertBoardVO;
 import info.hitech.repository.FreeBoardRepository;
-import info.hitech.repository.UserRepository;
-import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,8 +20,9 @@ public class BoardApi {
     }
 
     @RequestMapping(method = RequestMethod.POST,value = "/post")
-    public void join(@RequestBody FreeBoardVO freeBoardVO) {
-        freeBoardRepository.registBoard(freeBoardVO);
+    public InsertBoardVO join(@RequestBody InsertBoardVO insertBoardVO) {
+        freeBoardRepository.registBoard(insertBoardVO);
+        return insertBoardVO;
     }
 
     @GetMapping(value = "/board/{idx}")

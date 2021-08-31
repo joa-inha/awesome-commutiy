@@ -5,7 +5,7 @@
 
 <mapper namespace="mapper.freeBoardMapper">
 
-    <resultMap id="boardResultMap" type="info.hitech.model.FreeBoardVO">
+    <resultMap id="boardResultMap" type="info.hitech.model.boardVO.FreeBoardVO">
         <!--<result property="userId" column="id"/>-->
         <result property="boardId" column="idx"/>
         <result property="userName" column="username"/>
@@ -29,19 +29,11 @@
         ]]>
     </select>
 
-   <!-- <insert id="insertBoard" parameterType="info.hitech.model.FreeBoardVO">
-        <selectKey resultType="String" order="BEFORE" keyProperty="boardId">
-            SELECT
-            CONCAT('FB', DATE_FORMAT(NOW(), '%y%m%d%h%i%s')) AS FBSEQ
-        </selectKey>
-        INSERT INTO tbl_BOARD
-        (BOARD_ID ,UNAME, TITLE, CATEGORY, CONTENT, WDATE)
-        values(#{boardId},#{userName}, #{title}, #{category}, #{content}, now())
-
+    <insert id="insertBoard" parameterType="info.hitech.model.boardVO.InsertBoardVO">
         insert into TBL_BOARD
             (id, title, content, type, date)
-        values(#{userId}, 'test Title 3', 'test3', 'free', CURDATE());
+        values(#{userId}, #{title}, #{content}, #{category}, CURDATE());
 
-    </insert>-->
+    </insert>
 
 </mapper>
