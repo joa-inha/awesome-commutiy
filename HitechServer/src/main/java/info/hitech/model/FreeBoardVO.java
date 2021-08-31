@@ -1,5 +1,7 @@
 package info.hitech.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.sql.Date;
 
 public class FreeBoardVO {
@@ -8,6 +10,7 @@ public class FreeBoardVO {
     private String title;
     private String category;
     private String content;
+    @DateTimeFormat(pattern = "yyyy-mm-dd")
     private Date wdate;
 
     public int getBoardId() {

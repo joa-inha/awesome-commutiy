@@ -3,33 +3,45 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="mapper.freeBoard">
+<mapper namespace="mapper.freeBoardMapper">
 
-    <resultMap id="boardResultMap" type="info.hitech.model.UserVO">
-        <result property="id" column="id"/>
+    <resultMap id="boardResultMap" type="info.hitech.model.FreeBoardVO">
+        <!--<result property="userId" column="id"/>-->
+        <result property="boardId" column="idx"/>
         <result property="userName" column="username"/>
-        <result property="passWord" column="password"/>
+        <result property="title" column="title"/>
+        <result property="category" column="type"/>
+        <result property="content" column="content"/>
+        <result property="wdate" column="date"/>
     </resultMap>
 
-    <select id="selectUserInfoAll" resultType="hashMap">
+    <select id="selectBoardAll" resultType="hashMap">
     <![CDATA[
-        SELECT id, username, password
-        FROM TBL_USER
+        SELECT idx, username, title, content, type, date
+        FROM TBL_BOARD natural join(TBL_USER);
         ]]>
     </select>
 
-<insert id="insertBoard" parameterType="info.hitech.model.FreeBoardVO">
-    <selectKey resultType="String" order="BEFORE" keyProperty="boardId">
-        SELECT
-        CONCAT('FB', DATE_FORMAT(NOW(), '%y%m%d%h%i%s')) AS FBSEQ
-    </selectKey>
-    INSERT INTO FREE_BOARD
-    (BOARD_ID ,UNAME, TITLE, CATEGORY, CONTENT, WDATE)
-    values(#{boardId},#{userName}, #{title}, #{category}, #{content}, now())
+    <select id="getBoard" parameterType="map" resultMap="boardResultMap">
+    <![CDATA[
+        SELECT idx, username, title, content, type, date
+        FROM TBL_BOARD natural join(TBL_USER) WHERE idx = #{idx};
+        ]]>
+    </select>
 
-</insert>
-    SELECT idx, username, title, content, type, date from TBL_BOARD natural join(TBL_USER);
+   <!-- <insert id="insertBoard" parameterType="info.hitech.model.FreeBoardVO">
+        <selectKey resultType="String" order="BEFORE" keyProperty="boardId">
+            SELECT
+            CONCAT('FB', DATE_FORMAT(NOW(), '%y%m%d%h%i%s')) AS FBSEQ
+        </selectKey>
+        INSERT INTO tbl_BOARD
+        (BOARD_ID ,UNAME, TITLE, CATEGORY, CONTENT, WDATE)
+        values(#{boardId},#{userName}, #{title}, #{category}, #{content}, now())
 
-    SELECT idx, username, title, content, type, date from TBL_BOARD natural join(TBL_USER) WHERE idx = 1;
+        insert into TBL_BOARD
+            (id, title, content, type, date)
+        values(#{userId}, 'test Title 3', 'test3', 'free', CURDATE());
+
+    </insert>-->
 
 </mapper>

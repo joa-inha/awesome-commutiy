@@ -4,11 +4,14 @@ import info.hitech.model.FreeBoardVO;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Repository
 public class FreeBoardRepository {
-    private static final String MAPPER_NAME_SPACE="mapper.freeBoard.";
+    private static final String MAPPER_NAME_SPACE="mapper.freeBoardMapper.";
 
     @Autowired
     private SqlSessionTemplate sqlSessionTemplate;
@@ -22,6 +25,9 @@ public class FreeBoardRepository {
     }
 
     public FreeBoardVO getBoardByIdx(int idx){
-        return sqlSessionTemplate.selectOne(MAPPER_NAME_SPACE+ "getBoard", idx);
+        Map<String,Object> params = new HashMap();
+        params.put("idx", idx);
+
+        return sqlSessionTemplate.selectOne(MAPPER_NAME_SPACE+ "getBoard", params);
     }
 }
