@@ -29,6 +29,7 @@ dependencies {
     implementation "io.springfox:springfox-boot-starter:3.0.0"
 
     implementation group: 'org.springframework.boot', name: 'spring-boot-maven-plugin', version: '2.5.4'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '2.5.4', ext: 'pom'
 }
 
 test {
