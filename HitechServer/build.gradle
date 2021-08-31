@@ -19,10 +19,9 @@ dependencies {
     implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.7.4'
     implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.2.0'
 
-    /*implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '3.0.0'
-    implementation group: 'io.springfox', name: 'springfox-swagger2', version: '3.0.0'*/
-
     implementation "io.springfox:springfox-boot-starter:3.0.0"
+
+    implementation group: 'org.springframework.boot', name: 'spring-boot-maven-plugin', version: '2.5.4'
 }
 
 test {
