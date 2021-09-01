@@ -1,4 +1,6 @@
 plugins {
+    id 'org.springframework.boot' version '2.5.0'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
 }
 jar {
@@ -14,6 +16,7 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    maven { url "https://www.datanucleus.org/downloads/maven2/"}
 }
 
 dependencies {
