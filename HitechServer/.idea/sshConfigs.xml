@@ -3,7 +3,10 @@
   <component name="SshConfigs">
     <configs>
       <sshConfig host="3.14.170.164" id="14bff6c9-239a-4cc1-8434-e0e252fd3e5b" keyPath="C:\Zzu.pem" port="22" nameFormat="DESCRIPTIVE" username="ec2-user" />
+<<<<<<< HEAD
       <sshConfig host="3.36.33.222" id="a77c6238-72bb-4a9c-921f-f64cb1609a03" keyPath="C:\wonjongseo1-filot-aws.cer" port="22" nameFormat="DESCRIPTIVE" username="ec2-user" />
+=======
+>>>>>>> 047dbed781a02950c6da5bcba4f308839cb2ce66
     </configs>
   </component>
 </project>
