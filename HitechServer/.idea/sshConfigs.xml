@@ -2,7 +2,7 @@
 <project version="4">
   <component name="SshConfigs">
     <configs>
-      <sshConfig host="3.15.208.9" id="14bff6c9-239a-4cc1-8434-e0e252fd3e5b" keyPath="C:\Zzu.pem" port="22" nameFormat="DESCRIPTIVE" username="ec2-user" />
+      <sshConfig host="3.14.170.164" id="14bff6c9-239a-4cc1-8434-e0e252fd3e5b" keyPath="C:\Zzu.pem" port="22" nameFormat="DESCRIPTIVE" username="ec2-user" />
     </configs>
   </component>
 </project>
