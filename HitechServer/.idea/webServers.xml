@@ -3,7 +3,14 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="fe29e7cf-816d-413f-bc98-e0e53592a3c6" name="hitech">
-        <fileTransfer accessType="SFTP" host="3.15.208.9" port="22" sshConfigId="14bff6c9-239a-4cc1-8434-e0e252fd3e5b" sshConfig="ec2-user@3.15.208.9:22 key" keyPair="true">
+        <fileTransfer accessType="SFTP" host="3.14.170.164" port="22" sshConfigId="14bff6c9-239a-4cc1-8434-e0e252fd3e5b" sshConfig="ec2-user@3.14.170.164:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="cc173dda-5d8c-4bb3-a1ac-0c8f272f5ae4" name="FILOT">
+        <fileTransfer accessType="SFTP" host="3.36.33.222" port="22" sshConfigId="a77c6238-72bb-4a9c-921f-f64cb1609a03" sshConfig="ec2-user@3.36.33.222:22 key" keyPair="true">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
