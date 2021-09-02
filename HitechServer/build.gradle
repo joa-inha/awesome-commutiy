@@ -1,7 +1,10 @@
 plugins {
+    id 'org.springframework.boot' version '2.5.0'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    // 위 두 줄을 추가하지 않으면 NoClassDefFoundError를 발생시킨다. 공식문서 참고
     id 'java'
 }
-java {
+jar {
     manifest {
         attributes(
                 'Main-Class': 'info.hitech.MainRun'
@@ -14,6 +17,7 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    maven { url "https://www.datanucleus.org/downloads/maven2/"}
 }
 
 dependencies {
