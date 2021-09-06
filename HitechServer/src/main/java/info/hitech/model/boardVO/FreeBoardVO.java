@@ -3,11 +3,12 @@ package info.hitech.model.boardVO;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.sql.Date;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class FreeBoardVO extends BoardVO {
     private String userName;
     private int boardId;
-    @DateTimeFormat(pattern = "yyyy-mm-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date wdate;
 
     public String getUserName() {
