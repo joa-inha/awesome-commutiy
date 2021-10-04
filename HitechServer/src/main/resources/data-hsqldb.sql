@@ -1,3 +1,4 @@
+-- sample datas
 insert into TBL_USER values(unhex(replace(uuid(), '-', '')), 'test1', 'kim', '1234');
 insert into TBL_USER values(unhex(replace(uuid(), '-', '')), 'test2', 'kim1', '1234');
 insert into TBL_USER values(unhex(replace(uuid(), '-', '')), 'test3', 'kim3', '1234');
